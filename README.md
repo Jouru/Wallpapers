@@ -1,6 +1,6 @@
 # Wallpapers
 #### Description
-A script to change the wallpaper automatically after a period of time.  
+A script to change the wallpaper automatically.  
 
 #### Instructions
   1. You have to chanche the path for your own directory of wallpapers
