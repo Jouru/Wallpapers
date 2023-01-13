@@ -15,7 +15,7 @@ def main():
     if not os.path.isfile("wallpapers.conf"):
         with open("wallpapers.conf", "w") as file:
             time = "3600"
-            path = "/home/abner/.config/qtile/Wallpapers/"
+            path = "~/Wallpapers/"
             file.write(f"Time= {time}\n")
             file.write(f"PATH= {path}")
             
