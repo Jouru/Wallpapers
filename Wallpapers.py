@@ -22,7 +22,7 @@ def main():
     if args.set:
         ## Define a new time
         if args.time:
-            new_time = args.time*60
+            new_time = args.time
             with open("wallpapers.conf", "r") as file:
                 lines = file.readlines()
             for l in range(len(lines)):
@@ -51,7 +51,7 @@ def main():
 
         ## Get time and path to wallpapers directory
         pth = new_lines[1].lstrip("PATH= ").strip()
-        time = int(new_lines[0].strip("Time= "))
+        time = int(new_lines[0].strip("Time= "))*60
      
         while True:
             ## Get the pictures names
