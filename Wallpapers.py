@@ -14,7 +14,7 @@ def main():
     ## Create the config file
     if not os.path.isfile("wallpapers.conf"):
         with open("wallpapers.conf", "w") as file:
-            time = "3600"
+            time = "60"
             path = "~/Wallpapers/"
             file.write(f"Time= {time}\n")
             file.write(f"PATH= {path}")
