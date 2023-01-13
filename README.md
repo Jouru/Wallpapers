@@ -1,6 +1,9 @@
 # Wallpapers
 ## Description
-A script to change the wallpaper automatically after a sleep time.  
+A script to change the wallpaper automatically after a sleep time.
+
+### Dependency
+This script use feh to set the wallpaper, in order to run the script you have to install feh
 
 ### CLI Arguments
 **--set** set the config
