@@ -52,8 +52,8 @@ def main():
             ]
 
             with open(config_file, "w") as file:
-                for line in range(len(lines)):
-                    file.write(f"{lines[line].strip()}\n")
+                for line in lines:
+                    file.write(f"{line.strip()}\n")
 
     # Define the wallpapers theme
     elif args.theme:
