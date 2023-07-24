@@ -29,24 +29,27 @@ def main():
     if args.set:
         # Define a new time
         if args.time:
-            new_time = args.time
             with open(config_file, "r") as file:
                 lines = file.readlines()
-            for line in range(len(lines)):
-                if lines[line].startswith("Time="):
-                    lines[line] = f"Time= {new_time}"
+
+            lines = [
+                f"Time= {args.time}" if item.startswith("Time=") else item
+                for item in lines
+            ]
 
             with open(config_file, "w") as file:
-                for line in range(len(lines)):
-                    file.write(f"{lines[line].strip()}\n")
+                for line in lines:
+                    file.write(f"{line.strip()}\n")
 
         # Define a new path
         if args.path:
             with open(config_file, "r") as file:
                 lines = file.readlines()
-            for line in range(len(lines)):
-                if lines[line].startswith("PATH="):
-                    lines[line] = f"PATH= {args.path}"
+
+            lines = [
+                f"PATH= {args.path}" if item.startswith("PATH=") else item
+                for item in lines
+            ]
 
             with open(config_file, "w") as file:
                 for line in range(len(lines)):
@@ -64,9 +67,9 @@ def main():
         if theme not in themes:
             sys.exit(f"{theme} doesn't exist in your themes")
 
-        for line in range(len(lines)):
-            if lines[line].startswith("THEME="):
-                lines[line] = f"THEME= {theme}"
+        lines = [
+            f"THEME= {theme}" if item.startswith("THEME=") else item for item in lines
+        ]
 
         with open(config_file, "w") as file:
             for line in lines:
